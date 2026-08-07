@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 08/06/2026 09:01:01 PM
+-- Create Date: 07.08.2026 18:52:14
 -- Design Name: 
--- Module Name: fpga_test - Behavioral
+-- Module Name: rs422 - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,17 +31,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity fpga_test is
-    Port ( clk_main : in STD_LOGIC;
-           clk_out : out STD_LOGIC;
-           sts_led1 : out STD_LOGIC;
-           sts_led2 : out STD_LOGIC);
-end fpga_test;
+entity rs422 is
+    Port ( RX : in STD_LOGIC;
+           TX : out STD_LOGIC;
+		   TX_EN : out STD_LOGIC;
+		   TX_nEN : out STD_LOGIC);
+end rs422;
 
-architecture Behavioral of fpga_test is
+architecture Behavioral of rs422 is
 
 begin
 
-   
+
 
 end Behavioral;
