@@ -1,0 +1,26 @@
+FPGA Function Flow:
+
+
+
+
+
+
+
+
+
+
+1.First add a 1Hz heartbeat to Green Led always
+
+2.make a UART Transceiver 9600 baud rate generator
+
+3.Route the TP_CLK_TST to baud rate clock for testing 
+
+4. On first power on boot send a RX message "A"
+
+5. Then wait for the TX to recive commands
+
+6. Store the command into a register 1
+
+7. For now ignore the unused pins
+
+8. For now ignore the command praser and data routing

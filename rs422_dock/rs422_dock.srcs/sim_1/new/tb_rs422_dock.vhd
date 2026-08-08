@@ -21,7 +21,7 @@ architecture sim of tb_rs422_dock is
                FP_STS1_GREEN 	: out STD_LOGIC;
                FP_STS2_YELLOW 	: out STD_LOGIC;
                F_nLOE 			: out STD_LOGIC_VECTOR (9 downto 0);
-               F_nLE 			: out STD_LOGIC_VECTOR (9 downto 0);
+               F_LE 			: out STD_LOGIC_VECTOR (9 downto 0);
                F1_LD 			: out STD_LOGIC_VECTOR (15 downto 0);
                F2_LD 			: out STD_LOGIC_VECTOR (15 downto 0);
                F3_LD 			: out STD_LOGIC_VECTOR (15 downto 0);
@@ -33,7 +33,7 @@ architecture sim of tb_rs422_dock is
     -- ==========================================
     -- Inputs to UUT (Unit Under Test)
     signal clk          : std_logic := '0';
-    signal reset        : std_logic := '1';
+    signal reset        : std_logic := '0';
     signal rx_in        : std_logic := '1'; -- UART idles high
 
     -- Outputs from UUT
@@ -43,7 +43,7 @@ architecture sim of tb_rs422_dock is
     signal led_green    : std_logic;
     signal led_yellow   : std_logic;
     signal f_nloe       : std_logic_vector(9 downto 0);
-    signal f_nle        : std_logic_vector(9 downto 0);
+    signal f_le        : std_logic_vector(9 downto 0);
     signal f1_ld        : std_logic_vector(15 downto 0);
     signal f2_ld        : std_logic_vector(15 downto 0);
     signal f3_ld        : std_logic_vector(15 downto 0);
@@ -68,7 +68,7 @@ begin
         FP_STS1_GREEN  => led_green,
         FP_STS2_YELLOW => led_yellow,
         F_nLOE         => f_nloe,
-        F_nLE          => f_nle,
+        F_LE           => f_le,
         F1_LD          => f1_ld,
         F2_LD          => f2_ld,
         F3_LD          => f3_ld,
@@ -111,9 +111,9 @@ begin
     begin
         -- 1. Hold reset state for 100 ns
         wait for 100 ns;
-        reset <= '0';
+        reset <= '1';
 
-        -- 2. Wait for the FPGA to send its boot message ('A' = x"41")
+        -- 2. Wait for the FPGA to send its boot message ('U' = x"55")
         -- 10 bits at 9600 baud takes roughly 1.04 ms. We will wait 1.5 ms to be safe.
         wait for 1.5 ms;
 

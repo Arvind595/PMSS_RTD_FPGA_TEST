@@ -33,22 +33,22 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity rs422_dock is
     Port ( FPGA_CLK_50MHZ 	: in STD_LOGIC;							--main clock source
-           RESET_SW 		: in STD_LOGIC;							--on board reset button
+           RESET_SW 		: in STD_LOGIC;							--on board reset button  Active Low
            RS422_TX 		: out STD_LOGIC;						--RS422 TX line
            RS422_RX 		: in STD_LOGIC;							--RS422 RX line
            RS422_TX_EN 		: out STD_LOGIC;						--TX Driver Enable active high for transmission
            RS422_TX_nEN 	: out STD_LOGIC;						--TX Driver Enable active Low for transmission
            FP_STS1_GREEN 	: out STD_LOGIC;						--on board Status LED Green
            FP_STS2_YELLOW 	: out STD_LOGIC;						--on board Status LED Yelow
-           F_nLOE 			: out STD_LOGIC_VECTOR (9 downto 0);	--Latch Output Enable, to make internal content enable ouside to pin	
-           F_nLE 			: out STD_LOGIC_VECTOR (9 downto 0);	--Latch enable to latch the incoming data to internal storage
+           F_nLOE 			: out STD_LOGIC_VECTOR (9 downto 0);	--Latch Output Enable, to make internal content enable ouside to pin Active Low
+           F_LE 			: out STD_LOGIC_VECTOR (9 downto 0);	--Latch enable to latch the incoming data to internal storage  Active high
            F1_LD 			: out STD_LOGIC_VECTOR (15 downto 0);	--F1/Bus1 for Latch Data
            F2_LD 			: out STD_LOGIC_VECTOR (15 downto 0);	--F2/Bus2 For Latch Data
            F3_LD 			: out STD_LOGIC_VECTOR (15 downto 0);	--F3/Bus3 For Latch Data
            --ID 				: in STD_LOGIC_VECTOR (3 downto 0);		--On board DIP switch for Board identification
            TP_CLK_TST 		: out STD_LOGIC						--test pin output for routing internal clock to outside
            --RESET_PC 		: in STD_LOGIC
-		   );						--External Reset signal from master card
+		   );						--External Reset signal from master card   Active low
 end rs422_dock;
 
 architecture Behavioral of rs422_dock is
@@ -77,8 +77,8 @@ architecture Behavioral of rs422_dock is
     type tx_state_type is (IDLE, START_BIT, DATA_BITS, STOP_BIT);
     signal tx_state         : tx_state_type := IDLE;
     signal tx_bit_cnt       : integer range 0 to 7 := 0;
-    signal tx_data          : std_logic_vector(7 downto 0) := x"41"; -- ASCII 'A'
-    signal boot_msg_sent    : std_logic := '0';                      -- Tracks if 'A' was sent on boot
+    signal tx_data          : std_logic_vector(7 downto 0) := B"0101_0101"; -- ASCII 'U'
+    signal boot_msg_sent    : std_logic := '0';                      -- Tracks if 'U' was sent on boot
     signal tx_reg           : std_logic := '1';                      -- Line idles high
     signal tx_en_reg        : std_logic := '0';
 
@@ -128,15 +128,16 @@ begin
     TP_CLK_TST <= baud_tick; -- Route to test pin
 
     -- ==========================================
-    -- 4. UART TX (Boot message 'A' & Driver Control)
+    -- 4. UART TX (Boot message 'U' & Driver Control)
     -- ==========================================
     process(FPGA_CLK_50MHZ, RESET_SW)
     begin
-        if RESET_SW = '1' then
+        if RESET_SW = '0' then
             tx_state <= IDLE;
             boot_msg_sent <= '0';
             tx_reg <= '1';
             tx_en_reg <= '0';
+			tx_bit_cnt <= 0;
         elsif rising_edge(FPGA_CLK_50MHZ) then
             if baud_tick = '1' then
                 case tx_state is
@@ -180,7 +181,7 @@ begin
     -- ==========================================
     process(FPGA_CLK_50MHZ, RESET_SW)
     begin
-        if RESET_SW = '1' then
+        if RESET_SW = '0' then
             rx_state <= IDLE;
             register_1 <= (others => '0');
         elsif rising_edge(FPGA_CLK_50MHZ) then
@@ -233,10 +234,10 @@ begin
     -- ==========================================
     -- Tying unused outputs to safe default states to prevent synthesis warnings
     FP_STS2_YELLOW <= '0';
-    F_nLOE         <= (others => '1'); -- Assuming active low output enable
-    F_nLE          <= (others => '1'); -- Assuming active low latch enable
-    F1_LD          <= (others => 'Z');
-    F2_LD          <= (others => 'Z');
-    F3_LD          <= (others => 'Z');
+    F_nLOE         <= (others => '1'); --  active low output enable
+    F_LE           <= (others => '0'); --  active High latch enable
+    F1_LD          <= (others => '0');
+    F2_LD          <= (others => '0');
+    F3_LD          <= (others => '0');
 
 end Behavioral;

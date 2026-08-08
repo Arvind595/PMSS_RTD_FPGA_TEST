@@ -1,0 +1,74 @@
+i have a binary resistor chain from 0.5 ohms to 256 ohms with and relay in parallel so that i can set and resistance by closing the particular binary number equivalent , so 10 resistors, 10 relays like that i have 16 channels , so totally 160 relay i/o's 
+
+now the user wants to set a particulat resistance for particualr channel
+
+but i am using FPGA + Latches (relay drive capable) because i dont have enough pins
+
+the connection scheme for FPGA and latches are:
+
+FPGA is span into 3 buses shared to 10 latches (each latch is 16bit with Latch enable (active high) and latch output enable (active low))
+
+the first bus is shared to latch 1,2,3
+the second bus is shared to  latch 4,5,6 
+the third bus is shared to  latch 7,8,9, 10
+
+and fpga has direct Latch enable (active High) lines are all latches connected  
+
+10 LE and 10nLOE
+
+all the 160 i/o are named as LQ[0-159] latch Q [0-159]
+
+how the i/o are shared among latches are:
+
+latch 1 [Q0-Q7] = LQ[0-7]
+latch 1 [Q8-Q15] = LQ[32-39]
+latch 2 [Q0-Q7] = LQ[16-23]
+latch 2 [Q8-Q15] = LQ[48-55]
+latch 3 [Q0-Q7] = LQ[8-15]
+latch 3 [Q8-Q15] = LQ[24-31]
+latch 4 [Q0-Q7] = LQ[64-71]
+latch 4 [Q8-Q15] = LQ[80-87]
+latch 5 [Q0-Q7] = LQ[96-103]
+latch 5 [Q8-Q15] = LQ[112-119]
+latch 6 [Q0-Q7] = LQ[40-47]
+latch 6 [Q8-Q15] = LQ[56-63]
+latch 7 [Q0-Q7] = LQ[128-135]
+latch 7 [Q8-Q15] = LQ[144-151]
+latch 8 [Q0-Q7] = LQ[72-79]
+latch 8 [Q8-Q15] = LQ[88-95]
+latch 9 [Q0-Q7] = LQ[104-111]
+latch 9 [Q8-Q15] = LQ[120-127]
+latch 10 [Q0-Q7] = LQ[136-143]
+latch 10 [Q8-Q15] = LQ[152-159]
+
+MAKE SURE ALL THE I/O ARE ASSIGNED TO LATCHES IF NOT ASK ME
+
+now how the relay is assigned too i/o names:
+
+relays are in parallel to the binary resistor, so when the relay is ON that resistor is by-passed in the series chain of binary resistors
+
+all the relays have name for example : 
+
+256E_CH0 means 256ohms resistor relay in channel 0 ( total channels [0-15])
+
+256E_CH[0-7] is Connected to LQ[0-7]
+256E_CH[8-15] is Connected to LQ[0-7]
+128E_CH[0-7] is Connected to LQ[0-7]
+128E_CH[8-15] is Connected to LQ[0-7]
+64E_CH[0-7] is Connected to LQ[0-7]
+64E_CH[8-15] is Connected to LQ[0-7]
+32E_CH[0-7] is Connected to LQ[0-7]
+32E_CH[8-15] is Connected to LQ[0-7]
+16E_CH[0-7] is Connected to LQ[0-7]
+16E_CH[8-15] is Connected to LQ[0-7]
+8E_CH[0-7] is Connected to LQ[0-7]
+8E_CH[8-15] is Connected to LQ[0-7]
+4E_CH[0-7] is Connected to LQ[0-7]
+4E_CH[8-15] is Connected to LQ[0-7]
+2E_CH[0-7] is Connected to LQ[0-7]
+2E_CH[8-15] is Connected to LQ[0-7]
+1E_CH[0-7] is Connected to LQ[0-7]
+1E_CH[8-15] is Connected to LQ[0-7]
+0.5E_CH[0-7] is Connected to LQ[0-7]
+0.5E_CH[8-15] is Connected to LQ[0-7]
+
