@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1.386028818 ms"></ZoomStartTime>
-      <ZoomEndTime time="11.796028819 ms"></ZoomEndTime>
-      <Cursor1Time time="3.121028818 ms"></Cursor1Time>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="3.430000001 ms"></ZoomEndTime>
+      <Cursor1Time time="7.614630000 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="340"></NameColumnWidth>
-      <ValueColumnWidth column_width="155"></ValueColumnWidth>
+      <ValueColumnWidth column_width="145"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="24" />
    <wvobject fp_name="/tb_rs422_dock/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -83,8 +83,36 @@
       <obj_property name="ElementShortName">bit_period</obj_property>
       <obj_property name="ObjectShortName">bit_period</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_rs422_dock/uut/register_1" type="array">
-      <obj_property name="ElementShortName">register_1[7:0]</obj_property>
-      <obj_property name="ObjectShortName">register_1[7:0]</obj_property>
+   <wvobject fp_name="/tb_rs422_dock/uut/shadow" type="array">
+      <obj_property name="ElementShortName">shadow[159:0]</obj_property>
+      <obj_property name="ObjectShortName">shadow[159:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs422_dock/uut/rx_byte_1" type="array">
+      <obj_property name="ElementShortName">rx_byte_1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_byte_1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs422_dock/uut/rx_byte_2" type="array">
+      <obj_property name="ElementShortName">rx_byte_2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_byte_2[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs422_dock/uut/rx_byte_3" type="array">
+      <obj_property name="ElementShortName">rx_byte_3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_byte_3[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs422_dock/uut/rx_byte_4" type="array">
+      <obj_property name="ElementShortName">rx_byte_4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_byte_4[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs422_dock/uut/F1_LD" type="array">
+      <obj_property name="ElementShortName">F1_LD[15:0]</obj_property>
+      <obj_property name="ObjectShortName">F1_LD[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs422_dock/uut/F2_LD" type="array">
+      <obj_property name="ElementShortName">F2_LD[15:0]</obj_property>
+      <obj_property name="ObjectShortName">F2_LD[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs422_dock/uut/F3_LD" type="array">
+      <obj_property name="ElementShortName">F3_LD[15:0]</obj_property>
+      <obj_property name="ObjectShortName">F3_LD[15:0]</obj_property>
    </wvobject>
 </wave_config>

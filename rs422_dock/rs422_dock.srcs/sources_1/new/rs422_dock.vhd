@@ -24,7 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -119,7 +119,7 @@ architecture Behavioral of rs422_dock is
         ACK_BYTE_1, ACK_BYTE_2, ACK_BYTE_3, ACK_BYTE_4, ACK_WAIT
     );
     signal cmd_fsm          : cmd_fsm_type := BOOT_INIT;
-    signal wait_timer       : integer range 0 to BAUD_TICKS * 2 := 0; -- Small delay counter
+    --signal wait_timer       : integer range 0 to BAUD_TICKS * 2 := 0; -- Small delay counter
 
     -- Bus Drive Registers
     signal f1_bus_reg       : std_logic_vector(15 downto 0) := (others => '0');
@@ -200,6 +200,14 @@ begin
             rx_state <= IDLE;
             rx_byte_idx <= 0;
             rx_cmd_ready <= '0';
+            -- ADD THESE MISSING RESETS:
+            rx_baud_cnt  <= 0;
+            rx_bit_cnt   <= 0;
+            rx_shift_reg <= (others => '0');
+            rx_byte_1    <= (others => '0');
+            rx_byte_2    <= (others => '0');
+            rx_byte_3    <= (others => '0');
+            rx_byte_4    <= (others => '0');
         elsif rising_edge(FPGA_CLK_50MHZ) then
             -- Auto clear the command ready flag once main FSM sees it
             if cmd_fsm /= WAIT_CMD then
@@ -274,6 +282,9 @@ begin
             tx_reg <= '1';
             tx_en_reg <= '0';
             tx_busy <= '0';
+            -- ADD THESE MISSING RESETS:
+            tx_bit_cnt  <= 0;
+           
         elsif rising_edge(FPGA_CLK_50MHZ) then
             if baud_tick = '1' then
                 case tx_state is
@@ -325,6 +336,7 @@ begin
             f3_bus_reg <= (others => '0');
             le_reg <= (others => '0');
             tx_start <= '0';
+            tx_data_buf <= (others => '0');
         elsif rising_edge(FPGA_CLK_50MHZ) then
             -- Default TX pulse off
             tx_start <= '0';
