@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-2" LaunchTime="1786206853">
-  <File Type="PA-TCL" Name="rs422_dock.tcl"/>
   <File Type="REPORTS-TCL" Name="rs422_dock_reports.tcl"/>
-  <File Type="RDS-RDS" Name="rs422_dock.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="rs422_dock_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="rs422_dock_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="rs422_dock_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="rs422_dock.tcl"/>
+  <File Type="RDS-RDS" Name="rs422_dock.vds"/>
   <File Type="RDS-DCP" Name="rs422_dock.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="rs422_dock_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="rs422_dock_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/rs422_dock.vhd">
@@ -36,9 +33,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2026">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2026"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

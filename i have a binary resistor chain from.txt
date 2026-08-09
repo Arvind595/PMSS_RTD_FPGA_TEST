@@ -16,30 +16,30 @@ and fpga has direct Latch enable (active High) lines are all latches connected
 
 10 LE and 10nLOE
 
-all the 160 i/o are named as LQ[0-159] latch Q [0-159]
+all the 160 i/o are named as IO[0-159] (latch'S Q)
 
 how the i/o are shared among latches are:
 
-latch 1 [Q0-Q7] = LQ[0-7]
-latch 1 [Q8-Q15] = LQ[32-39]
-latch 2 [Q0-Q7] = LQ[16-23]
-latch 2 [Q8-Q15] = LQ[48-55]
-latch 3 [Q0-Q7] = LQ[8-15]
-latch 3 [Q8-Q15] = LQ[24-31]
-latch 4 [Q0-Q7] = LQ[64-71]
-latch 4 [Q8-Q15] = LQ[80-87]
-latch 5 [Q0-Q7] = LQ[96-103]
-latch 5 [Q8-Q15] = LQ[112-119]
-latch 6 [Q0-Q7] = LQ[40-47]
-latch 6 [Q8-Q15] = LQ[56-63]
-latch 7 [Q0-Q7] = LQ[128-135]
-latch 7 [Q8-Q15] = LQ[144-151]
-latch 8 [Q0-Q7] = LQ[72-79]
-latch 8 [Q8-Q15] = LQ[88-95]
-latch 9 [Q0-Q7] = LQ[104-111]
-latch 9 [Q8-Q15] = LQ[120-127]
-latch 10 [Q0-Q7] = LQ[136-143]
-latch 10 [Q8-Q15] = LQ[152-159]
+latch 1  [Q0-Q7] 	= 	IO[0-7]
+latch 1  [Q8-Q15] 	= 	IO[32-39]
+latch 2  [Q0-Q7] 	= 	IO[16-23]
+latch 2  [Q8-Q15] 	= 	IO[48-55]
+latch 3  [Q0-Q7] 	= 	IO[8-15]
+latch 3  [Q8-Q15] 	= 	IO[24-31]
+latch 4  [Q0-Q7] 	= 	IO[64-71]
+latch 4  [Q8-Q15] 	= 	IO[80-87]
+latch 5  [Q0-Q7] 	= 	IO[96-103]
+latch 5  [Q8-Q15] 	= 	IO[112-119]
+latch 6  [Q0-Q7] 	= 	IO[40-47]
+latch 6  [Q8-Q15] 	= 	IO[56-63]
+latch 7  [Q0-Q7] 	= 	IO[128-135]
+latch 7  [Q8-Q15] 	= 	IO[144-151]
+latch 8  [Q0-Q7] 	= 	IO[72-79]
+latch 8  [Q8-Q15] 	= 	IO[88-95]
+latch 9  [Q0-Q7] 	= 	IO[104-111]
+latch 9  [Q8-Q15] 	= 	IO[120-127]
+latch 10 [Q0-Q7] 	= 	IO[136-143]
+latch 10 [Q8-Q15] 	=   IO[152-159]
 
 MAKE SURE ALL THE I/O ARE ASSIGNED TO LATCHES IF NOT ASK ME
 
@@ -51,24 +51,242 @@ all the relays have name for example :
 
 256E_CH0 means 256ohms resistor relay in channel 0 ( total channels [0-15])
 
-256E_CH[0-7] is Connected to LQ[0-7]
-256E_CH[8-15] is Connected to LQ[0-7]
-128E_CH[0-7] is Connected to LQ[0-7]
-128E_CH[8-15] is Connected to LQ[0-7]
-64E_CH[0-7] is Connected to LQ[0-7]
-64E_CH[8-15] is Connected to LQ[0-7]
-32E_CH[0-7] is Connected to LQ[0-7]
-32E_CH[8-15] is Connected to LQ[0-7]
-16E_CH[0-7] is Connected to LQ[0-7]
-16E_CH[8-15] is Connected to LQ[0-7]
-8E_CH[0-7] is Connected to LQ[0-7]
-8E_CH[8-15] is Connected to LQ[0-7]
-4E_CH[0-7] is Connected to LQ[0-7]
-4E_CH[8-15] is Connected to LQ[0-7]
-2E_CH[0-7] is Connected to LQ[0-7]
-2E_CH[8-15] is Connected to LQ[0-7]
-1E_CH[0-7] is Connected to LQ[0-7]
-1E_CH[8-15] is Connected to LQ[0-7]
-0.5E_CH[0-7] is Connected to LQ[0-7]
-0.5E_CH[8-15] is Connected to LQ[0-7]
+256E_CH	[0-7] 	is Connected to IO[0-7] 	latch 1
+256E_CH	[8-15] 	is Connected to IO[8-15] 	latch 3
+128E_CH	[0-7] 	is Connected to IO[16-23] 	latch 2
+128E_CH	[8-15] 	is Connected to IO[24-31] 	latch 3
+64E_CH	[0-7] 	is Connected to IO[32-39]   latch 1
+64E_CH	[8-15] 	is Connected to IO[40-47]   latch 6
+32E_CH	[0-7] 	is Connected to IO[48-55]   latch 2
+32E_CH	[8-15] 	is Connected to IO[56-63]   latch 6
+16E_CH	[0-7] 	is Connected to IO[64-71]   latch 4
+16E_CH	[8-15] 	is Connected to IO[72-79]   latch 8
+8E_CH	[0-7] 	is Connected to IO[80-87]   latch 4
+8E_CH	[8-15] 	is Connected to IO[88-95]   latch 8
+4E_CH	[0-7] 	is Connected to IO[96-103]  latch 5
+4E_CH	[8-15] 	is Connected to IO[104-111] latch 9
+2E_CH	[0-7] 	is Connected to IO[112-119] latch 5
+2E_CH	[8-15] 	is Connected to IO[120-127] latch 9
+1E_CH	[0-7] 	is Connected to IO[128-135] latch 7
+1E_CH	[8-15] 	is Connected to IO[136-143] latch 10
+0.5E_CH	[0-7] 	is Connected to IO[144-151] latch 7
+0.5E_CH	[8-15] 	is Connected to IO[152-159] latch 10
 
+now i want following things:
+
+1. i want an decode/table/logic/relation of ohms required for a particular channel to binary/hex/dec value of those 10 relays to be set 
+2. i want an decode/table/logic/relation of user entered data "CHx XXX.X" to sequence of bus datas to be written , which sequence of latch to be enabled?
+
+
+ask me if something feels odd 
+
+
+
+                 ┌─────────────────────┐
+UART RX ────────►│ Command Decoder   Clear or Write  │
+                 └──────────┬──────────┘
+                            │
+                     channel + code
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Resistance Decoder  │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ 160-bit Shadow      │
+                 │ Register            │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Latch Data Builder  │
+                 └──────────┬──────────┘
+                            │
+                  10 × 16-bit words
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ Relay Update FSM    │
+                 └──────────┬──────────┘
+                            │
+             ┌──────────────┼──────────────┐
+             ▼              ▼              ▼
+          BUS1            BUS2            BUS3
+        DATA[15:0]      DATA[15:0]      DATA[15:0]
+
+            CHANNEL +  RESISTANCE CODE from user
+                  │
+                  ▼
+          10-bit resistance code
+                  │
+                  ▼
+          invert relay polarity
+                  │
+                  ▼
+         update shadow[159:0] 
+                  │
+                  ▼
+       ┌──────────────────────┐
+       │   shadow → latches   │
+       └──────────────────────┘
+          │    │    │
+          ▼    ▼    ▼
+        BUS1 BUS2 BUS3
+          │    │    │
+          ▼    ▼    ▼
+        L1-L3 L4-L6 L7-L10
+
+
+Step 1: Make the Input Command
+
+Byte1 = 55 (Special code to Alert FPGA = Write mode) , AA to reset all resistors channels to 511.5ohms
+Byte2 = AA (channel 11)
+Byte3 = 03 (high byte of 10bit resistance code)
+Byte4 = FF (high byte of 10bit resistance code)
+
+Resistance_code = Resistance / 0.5
+mode = write
+Channel = 11
+Resistance_code = 1023
+Resistance = 1023 × 0.5
+             = 511.5 Ω
+Received:
+ AA 0B 03 FF
+       │  │
+       └──┴── 10-bit code = 1023
+Step 2  : Ack : 
+
+PC → FPGA
+
+AA 0B 03 FF
+
+FPGA → PC
+
+55 0B 03 FF (special byte  +  Channel number + Data received) (for reset send Special byte + FF)
+
+Step 3 : Derive the shadow mapping : shadow relay bits = NOT(resistance_code)
+
+
+
+channel = C
+resistance bit = B
+IO = (9-B)*16 + C
+shadow[(9-bit)*16 + channel]
+
+Example:
+B = 9 → 256 Ω
+C = 11
+
+IO = (9-9)*16 + 11
+   = 11 (256E_CH11 → IO11 from the shadow table)
+
+Code snipp: gives all ten relay outputs for that channel.
+ 
+shadow_v := shadow;-- Copy current shadow register
+for B = 9 downto 0:
+    IO = (9-B)*16 + channel;
+    shadow[IO] = NOT(resistance_code[B]);
+shadow <= shadow_v;-- Write modified shadow back
+
+--Very important: don't destroy the other channels
+--make this a separate VHDL procedure
+"
+procedure update_channel(
+    variable shadow_v : inout std_logic_vector(159 downto 0);
+    constant ch       : in integer;
+    constant r_code   : in std_logic_vector(9 downto 0)
+) is
+    variable index_v : integer;
+begin
+
+    for bit_num in 0 to 9 loop
+
+        index_v := (9 - bit_num) * 16 + ch;
+
+        shadow_v(index_v) := not r_code(bit_num);
+
+    end loop;
+
+end procedure;
+"
+"shadow_v := shadow;
+
+update_channel(
+    shadow_v,
+    channel_integer,
+    resistance_code
+);
+
+shadow <= shadow_v;
+"
+
+
+Channel = CH11
+
+Code output : 
+
+256 Ω → shadow[11]
+128 Ω → shadow[27]
+64 Ω  → shadow[43]
+32 Ω  → shadow[59]
+16 Ω  → shadow[75]
+8 Ω   → shadow[91]
+4 Ω   → shadow[107]
+2 Ω   → shadow[123]
+1 Ω   → shadow[139]
+0.5 Ω → shadow[155]
+
+One improvement: calculate the index without multiplication
+can also organize the shadow as 10 groups of 16 bits:|
+shadow:
+shadow(group*16 + channel)
+[159:144] → 0.5 Ω
+[143:128] → 1 Ω
+[127:112] → 2 Ω
+[111:96]  → 4 Ω
+[95:80]   → 8 Ω
+[79:64]   → 16 Ω
+[63:48]   → 32 Ω
+[47:32]   → 64 Ω
+[31:16]   → 128 Ω
+[15:0]    → 256 Ω
+
+Step 4: Shadow to Latches mapping 
+
+signal shadow       : std_logic_vector(159 downto 0);
+signal latch_data   : std_logic_vector(15 downto 0);
+
+signal latch1_data  : std_logic_vector(15 downto 0);
+signal latch2_data  : std_logic_vector(15 downto 0);
+signal latch3_data  : std_logic_vector(15 downto 0);
+signal latch4_data  : std_logic_vector(15 downto 0);
+signal latch5_data  : std_logic_vector(15 downto 0);
+signal latch6_data  : std_logic_vector(15 downto 0);
+signal latch7_data  : std_logic_vector(15 downto 0);
+signal latch8_data  : std_logic_vector(15 downto 0);
+signal latch9_data  : std_logic_vector(15 downto 0);
+signal latch10_data : std_logic_vector(15 downto 0);
+
+latch1_data  <= shadow(39 downto 32)   & shadow(7 downto 0);
+latch2_data  <= shadow(55 downto 48)   & shadow(23 downto 16);
+latch3_data  <= shadow(31 downto 24)   & shadow(15 downto 8);
+
+latch4_data  <= shadow(87 downto 80)   & shadow(71 downto 64);
+latch5_data  <= shadow(119 downto 112) & shadow(103 downto 96);
+latch6_data  <= shadow(63 downto 56)   & shadow(47 downto 40);
+
+latch7_data  <= shadow(151 downto 144) & shadow(135 downto 128);
+latch8_data  <= shadow(95 downto 88)   & shadow(79 downto 72);
+latch9_data  <= shadow(127 downto 120) & shadow(111 downto 104);
+latch10_data <= shadow(159 downto 152) & shadow(143 downto 136);
+
+Step 5 : bus assignment 
+
+BUS1_DATA = shared by L1, L2, L3
+BUS2_DATA = shared by L4, L5, L6
+BUS3_DATA = shared by L7, L8, L9, L10
+
+
+The next step should be to derive the complete update FSM, including exactly when LnOE[9:0], DATA[15:0], and LE0..LE9 change, with the conservative 1 ms relay-disable time and the boot-time clearing sequence.
