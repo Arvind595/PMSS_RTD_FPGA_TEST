@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
-| Date             : Mon Aug 10 11:21:47 2026
-| Host             : RTLPC running 64-bit major release  (build 9200)
+| Date             : Mon Aug 10 11:31:07 2026
+| Host             : Arvinds-MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file rs422_dock_power_routed.rpt -pb rs422_dock_power_summary_routed.pb -rpx rs422_dock_power_routed.rpx
 | Design           : rs422_dock
 | Device           : xc7a100tcsg324-2

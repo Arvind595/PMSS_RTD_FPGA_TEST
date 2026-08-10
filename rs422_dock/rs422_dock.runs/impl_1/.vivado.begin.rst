@@ -1,20 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="kungf" Host="RTLPC" Pid="25620" HostCore="28" HostMemory="016851382272">
+    <Process Command="vivado.bat" Owner="arvin" Host="ARVINDS-MSI" Pid="21680" HostCore="24" HostMemory="016868519936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="kungf" Host="RTLPC" Pid="20812" HostCore="28" HostMemory="016851382272">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="kungf" Host="RTLPC" Pid="24556" HostCore="28" HostMemory="016851382272">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="kungf" Host="RTLPC" Pid="15800" HostCore="28" HostMemory="016851382272">
+    <Process Command="vivado.bat" Owner="arvin" Host="ARVINDS-MSI" Pid="15492" HostCore="24" HostMemory="016868519936">
     </Process>
 </ProcessHandle>

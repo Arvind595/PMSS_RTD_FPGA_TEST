@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.tcl"
+  variable script "D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,27 +56,22 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param general.usePosixSpawnForFork 1
-set_param chipscope.maxJobs 7
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.cache/wt [current_project]
-set_property parent.project_path C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.xpr [current_project]
+set_property webtalk.parent_dir {D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.cache/wt} [current_project]
+set_property parent.project_path {D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo c:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.cache/ip [current_project]
+set_property ip_output_repo {d:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -vhdl2008 -library xil_defaultlib C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd
+read_vhdl -vhdl2008 -library xil_defaultlib {{D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd}}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -86,8 +81,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc
-set_property used_in_implementation false [get_files C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]
+read_xdc {{D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc}}
+set_property used_in_implementation false [get_files {{D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -12,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/AMDDesignTools/2026.1/Vitis/bin;C:/AMDDesignTools/2026.1/Vivado/ids_lite/ISE/bin/nt64;C:/AMDDesignTools/2026.1/Vivado/ids_lite/ISE/lib/nt64:C:/AMDDesignTools/2026.1/Vivado/bin
+  PATH=D:/AMDDesignTools/2026.1/Vitis/bin;D:/AMDDesignTools/2026.1/Vivado/ids_lite/ISE/bin/nt64;D:/AMDDesignTools/2026.1/Vivado/ids_lite/ISE/lib/nt64:D:/AMDDesignTools/2026.1/Vivado/bin
 else
-  PATH=C:/AMDDesignTools/2026.1/Vitis/bin;C:/AMDDesignTools/2026.1/Vivado/ids_lite/ISE/bin/nt64;C:/AMDDesignTools/2026.1/Vivado/ids_lite/ISE/lib/nt64:C:/AMDDesignTools/2026.1/Vivado/bin:$PATH
+  PATH=D:/AMDDesignTools/2026.1/Vitis/bin;D:/AMDDesignTools/2026.1/Vivado/ids_lite/ISE/bin/nt64;D:/AMDDesignTools/2026.1/Vivado/ids_lite/ISE/lib/nt64:D:/AMDDesignTools/2026.1/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/impl_1'
+HD_PWD='D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

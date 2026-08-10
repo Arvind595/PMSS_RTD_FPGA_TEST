@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc rfile:../../../rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc} rfile:../../../rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN B8 [get_ports FPGA_CLK_50MHZ]
 set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]

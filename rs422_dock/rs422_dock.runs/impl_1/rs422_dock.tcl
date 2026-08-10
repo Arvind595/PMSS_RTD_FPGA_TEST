@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/impl_1/rs422_dock.tcl"
+  variable script "D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/impl_1/rs422_dock.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,9 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -108,12 +105,11 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param general.usePosixSpawnForFork 1
-  set_param chipscope.maxJobs 7
-  set_param runs.launchOptions { -jobs 28  }
+  set_param chipscope.maxJobs 6
+  set_param runs.launchOptions { -jobs 24  }
   open_checkpoint rs422_dock_routed.dcp
-  set_property webtalk.parent_dir C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.cache/wt [current_project]
+  set_property webtalk.parent_dir {D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.cache/wt} [current_project]
 set_property TOP rs422_dock [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

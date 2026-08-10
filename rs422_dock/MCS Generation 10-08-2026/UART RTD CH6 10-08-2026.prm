@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               32M
+Start Address      0x00000000
+End Address        0x01FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x003A607B    Aug 10 11:32:02 2026    D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/impl_1/rs422_dock.bit

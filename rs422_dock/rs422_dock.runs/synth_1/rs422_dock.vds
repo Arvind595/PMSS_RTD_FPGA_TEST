@@ -1,28 +1,29 @@
-INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 06-aug-2027.
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 05-aug-2027.
 #-----------------------------------------------------------
 # Vivado v2026.1 (64-bit)
 # SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Mon Aug 10 11:20:00 2026
-# Process ID         : 21224
-# Current directory  : C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/synth_1
+# Start of session at: Mon Aug 10 11:29:27 2026
+# Process ID         : 17544
+# Current directory  : D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/synth_1
 # Command line       : vivado.exe -log rs422_dock.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rs422_dock.tcl
-# Log file           : C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.vds
-# Journal file       : C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/synth_1\vivado.jou
-# Running On         : RTLPC
+# Log file           : D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.vds
+# Journal file       : D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/synth_1\vivado.jou
+# Running On         : Arvinds-MSI
 # Platform           : Windows 11
 # Operating System   : 26200
-# Processor Detail   : Intel(R) Core(TM) i7-14700
-# CPU Frequency      : 2112 MHz
-# CPU Physical cores : 20
-# CPU Logical cores  : 28
-# Host memory        : 16851 MB
-# Swap memory        : 5786 MB
-# Total Virtual      : 22638 MB
-# Available Virtual  : 4061 MB
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700HX
+# CPU Frequency      : 2304 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 24
+# Host memory        : 16868 MB
+# Swap memory        : 3047 MB
+# Total Virtual      : 19915 MB
+# Available Virtual  : 7224 MB
 #-----------------------------------------------------------
 source rs422_dock.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 584.664 ; gain = 269.406
 Command: synth_design -top rs422_dock -part xc7a100tcsg324-2
 Starting synth_design
 Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7a100t'
@@ -31,12 +32,12 @@ INFO: [Device 21-403] Loading part xc7a100tcsg324-2
 INFO: [Designutils 20-5008] Incremental synthesis strategy default
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 27288
+INFO: [Synth 8-7075] Helper process launched with PID 21988
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1362.109 ; gain = 578.547
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1362.195 ; gain = 578.578
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'rs422_dock' [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:54]
-INFO: [Synth 8-256] done synthesizing module 'rs422_dock' (0#1) [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'rs422_dock' [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'rs422_dock' (0#1) [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:54]
 WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[9] driven by constant 0
 WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[8] driven by constant 0
 WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[7] driven by constant 0
@@ -48,48 +49,48 @@ WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[2] driven by constant 
 WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[1] driven by constant 0
 WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1491.137 ; gain = 707.574
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1492.156 ; gain = 708.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1491.137 ; gain = 707.574
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1492.156 ; gain = 708.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1491.137 ; gain = 707.574
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1492.156 ; gain = 708.539
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1491.137 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1492.156 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]
-Finished Parsing XDC File [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rs422_dock_propImpl.xdc].
+Parsing XDC File [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]
+Finished Parsing XDC File [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rs422_dock_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/rs422_dock_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1537.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1540.777 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1538.645 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1540.828 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1538.645 ; gain = 755.082
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1540.828 ; gain = 757.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1538.645 ; gain = 755.082
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1540.828 ; gain = 757.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1538.645 ; gain = 755.082
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1540.828 ; gain = 757.211
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'rs422_dock'
 INFO: [Synth 8-802] inferred FSM for state register 'rx_byte_idx_reg' in module 'rs422_dock'
@@ -141,7 +142,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'cmd_fsm_reg' using encodin
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encoding 'one-hot' in module 'rs422_dock'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1538.645 ; gain = 755.082
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1540.828 ; gain = 757.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -202,25 +203,25 @@ WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[2] driven by constant 
 WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[1] driven by constant 0
 WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1579.367 ; gain = 795.805
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1580.723 ; gain = 797.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1710.676 ; gain = 927.113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1711.879 ; gain = 928.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1749.840 ; gain = 966.277
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1751.234 ; gain = 967.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1749.840 ; gain = 966.277
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1751.234 ; gain = 967.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -238,37 +239,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2001.215 ; gain = 1217.652
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2002.816 ; gain = 1219.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2001.215 ; gain = 1217.652
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2002.816 ; gain = 1219.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2001.215 ; gain = 1217.652
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2002.816 ; gain = 1219.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2001.215 ; gain = 1217.652
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2002.816 ; gain = 1219.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2001.215 ; gain = 1217.652
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2002.816 ; gain = 1219.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2001.215 ; gain = 1217.652
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2002.816 ; gain = 1219.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -299,18 +300,18 @@ Report Cell Usage:
 |13    |OBUF   |    74|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2001.215 ; gain = 1217.652
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2002.816 ; gain = 1219.199
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2001.215 ; gain = 1170.145
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2001.215 ; gain = 1217.652
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2002.816 ; gain = 1170.527
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2002.816 ; gain = 1219.199
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2008.465 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2011.977 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2012.129 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2015.656 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -318,8 +319,8 @@ Synth Design complete | Checksum: 4c0eb92c
 INFO: [Common 17-83] Releasing license: Vivado_Synthesis
 26 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.129 ; gain = 1425.160
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2012.129 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:33 . Memory (MB): peak = 2015.672 ; gain = 1431.008
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2015.672 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file rs422_dock_utilization_synth.rpt -pb rs422_dock_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 10 11:20:33 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 10 11:30:07 2026...
