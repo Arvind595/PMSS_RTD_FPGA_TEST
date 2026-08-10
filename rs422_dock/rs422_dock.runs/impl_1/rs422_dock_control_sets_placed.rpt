@@ -1,0 +1,118 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Mon Aug 10 11:21:24 2026
+| Host         : RTLPC running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file rs422_dock_control_sets_placed.rpt
+| Design       : rs422_dock
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    40 |
+|    Minimum number of control sets                        |    40 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   200 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    40 |
+| >= 0 to < 4        |    10 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |    18 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               3 |            3 |
+| No           | No                    | Yes                    |              11 |            6 |
+| No           | Yes                   | No                     |              38 |           11 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             300 |           92 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+--------------------------------+-----------------------------------+------------------+----------------+--------------+
+|        Clock Signal       |          Enable Signal         |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------+--------------------------------+-----------------------------------+------------------+----------------+--------------+
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_shift_reg[6]_i_1_n_0        | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | TP_CLK_TST_OBUF                | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_shift_reg[7]_i_1_n_0        | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_shift_reg[0]_i_1_n_0        | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_shift_reg[1]_i_1_n_0        | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_shift_reg[2]_i_1_n_0        | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_shift_reg[4]_i_1_n_0        | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_shift_reg[3]_i_1_n_0        | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_shift_reg[5]_i_1_n_0        | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG |                                |                                   |                3 |              3 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | FSM_onehot_tx_state[3]_i_1_n_0 | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              4 |         4.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_byte_idx[0]                 | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              4 |         4.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_byte_3[0]                   | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              8 |         8.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_byte_2[0]                   | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                3 |              8 |         2.67 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | tx_start_i_1_n_0               | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                3 |              8 |         2.67 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_byte_4[7]_i_1_n_0           | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |              8 |         4.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_byte_1[0]                   | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                1 |              8 |         8.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[153]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[159]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[152]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[150]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[148]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[155]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[156]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[158]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[144]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[147]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[145]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[154]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[157]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[146]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | le_reg[0]                      | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                6 |             10 |         1.67 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[149]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | shadow[151]_i_1_n_0            | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG |                                | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                6 |             11 |         1.83 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | FSM_onehot_cmd_fsm[11]_i_1_n_0 | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                5 |             12 |         2.40 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG |                                | baud_cnt[12]_i_1_n_0              |                4 |             13 |         3.25 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_baud_cnt[0]                 | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |                5 |             13 |         2.60 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG |                                | led_green_reg                     |                7 |             25 |         3.57 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | f1_bus_reg[15]_i_1_n_0         | FSM_onehot_rx_byte_idx[3]_i_2_n_0 |               18 |             48 |         2.67 |
++---------------------------+--------------------------------+-----------------------------------+------------------+----------------+--------------+
+
+

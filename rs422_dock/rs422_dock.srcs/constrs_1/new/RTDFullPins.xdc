@@ -1,4 +1,11 @@
 set_property PACKAGE_PIN B8 [get_ports FPGA_CLK_50MHZ]
+# Define the 50 MHz main clock (Period = 20 ns)
+create_clock -period 20.000 -name sys_clk_pin -waveform {0.000 10.000} -add [get_ports FPGA_CLK_50MHZ]
+# Set a generic 2ns input delay for all inputs
+set_input_delay -clock sys_clk_pin -add_delay 2.000 [get_ports {RESET_SW RS422_RX}]
+
+# Set a generic 2ns output delay for all outputs
+set_output_delay -clock sys_clk_pin -add_delay 2.000 [get_ports -filter { NAME =~  "*" && DIRECTION =~  "*OUT*" }]
 set_property IOSTANDARD LVCMOS33 [get_ports FPGA_CLK_50MHZ]
 set_property PACKAGE_PIN T9 [get_ports FP_STS1_GREEN]
 set_property IOSTANDARD LVCMOS33 [get_ports FP_STS1_GREEN]
@@ -160,3 +167,14 @@ set_property SLEW FAST [get_ports RS422_TX]
 set_property SLEW FAST [get_ports RS422_TX_EN]
 set_property SLEW FAST [get_ports RS422_TX_nEN]
 set_property SLEW FAST [get_ports TP_CLK_TST]
+
+
+
+
+set_property BITSTREAM.GENERAL.COMPRESS FALSE [current_design]
+set_property CONFIG_VOLTAGE 3.3 [current_design]
+set_property CFGBVS VCCO [current_design]
+set_property CONFIG_MODE SPIx4 [current_design]
+set_property BITSTREAM.CONFIG.CONFIGRATE 33 [current_design]
+set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
+set_property BITSTREAM.CONFIG.SPI_32BIT_ADDR YES [current_design]

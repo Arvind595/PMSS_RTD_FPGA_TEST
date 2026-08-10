@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
-      <ZoomEndTime time="3.430000001 ms"></ZoomEndTime>
-      <Cursor1Time time="7.614630000 ms"></Cursor1Time>
+      <ZoomEndTime time="697.500000001 ms"></ZoomEndTime>
+      <Cursor1Time time="74.273118279 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="340"></NameColumnWidth>
-      <ValueColumnWidth column_width="145"></ValueColumnWidth>
+      <ValueColumnWidth column_width="141"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="25" />
    <wvobject fp_name="/tb_rs422_dock/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -114,5 +114,9 @@
    <wvobject fp_name="/tb_rs422_dock/uut/F3_LD" type="array">
       <obj_property name="ElementShortName">F3_LD[15:0]</obj_property>
       <obj_property name="ObjectShortName">F3_LD[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_rs422_dock/uut/le_reg" type="array">
+      <obj_property name="ElementShortName">le_reg[9:0]</obj_property>
+      <obj_property name="ObjectShortName">le_reg[9:0]</obj_property>
    </wvobject>
 </wave_config>
