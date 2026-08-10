@@ -47,7 +47,7 @@ entity rs422_dock is
            F3_LD 			: out STD_LOGIC_VECTOR (15 downto 0);	--F3/Bus3 For Latch Data
            --ID 			: in STD_LOGIC_VECTOR (3 downto 0);		--On board DIP switch for Board identification
            TP_CLK_TST 		: out STD_LOGIC						    --test pin output for routing internal clock to outside
-           --RESET_PC 		: in STD_LOGIC                          --External Reset signal from master card   Active low
+           --RESET_PC 		 : in STD_LOGIC                          --External Reset signal from master card   Active low
 		   );						
 end rs422_dock;
 

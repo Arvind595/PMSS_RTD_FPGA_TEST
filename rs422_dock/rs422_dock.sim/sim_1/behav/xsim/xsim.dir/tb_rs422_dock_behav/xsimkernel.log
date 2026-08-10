@@ -1,4 +1,7 @@
-Running: xsim.dir/tb_rs422_dock_behav/xsimk.exe -simmode gui -wdb tb_rs422_dock_behav.wdb -simrunnum 0 -socket 1483
+Running: xsim.dir/tb_rs422_dock_behav/xsimk.exe -simmode gui -wdb tb_rs422_dock_behav.wdb -simrunnum 0 -socket 49684
 Design successfully loaded
-Design Loading Memory Usage: 19144 KB (Peak: 19144 KB)
+Design Loading Memory Usage: 19780 KB (Peak: 19780 KB)
 Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 28416 KB (Peak: 28416 KB)
+Simulation CPU Usage: 691936 ms

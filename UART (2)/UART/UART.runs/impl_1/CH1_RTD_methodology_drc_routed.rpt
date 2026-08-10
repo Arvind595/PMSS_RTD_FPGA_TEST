@@ -1,0 +1,295 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Sat Aug  8 16:42:52 2026
+| Host         : Rajesh running 64-bit major release  (build 9200)
+| Command      : report_methodology -file CH1_RTD_methodology_drc_routed.rpt -pb CH1_RTD_methodology_drc_routed.pb -rpx CH1_RTD_methodology_drc_routed.rpx
+| Design       : CH1_RTD
+| Device       : xc7a100tcsg324-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 52
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 52         |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on RESET_SW relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on RS422_RX relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[0] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[10] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[11] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[12] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[13] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[14] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[15] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[1] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[2] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[3] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[4] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[5] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[6] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[7] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[8] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on F1_LD[9] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[0] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[10] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[11] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[12] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[13] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[14] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[15] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[1] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[2] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[3] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[4] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[5] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[6] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[7] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#33 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[8] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#34 Warning
+Missing input or output delay  
+An output delay is missing on F2_LD[9] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#35 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[0] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#36 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[10] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#37 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[11] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#38 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[12] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#39 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[13] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#40 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[14] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#41 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[15] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#42 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[1] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#43 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[2] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#44 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[3] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#45 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[4] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#46 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[5] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#47 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[6] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#48 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[7] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#49 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[8] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#50 Warning
+Missing input or output delay  
+An output delay is missing on F3_LD[9] relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#51 Warning
+Missing input or output delay  
+An output delay is missing on FP_STS2 relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+TIMING-18#52 Warning
+Missing input or output delay  
+An output delay is missing on RS422_TX relative to the rising and/or falling clock edge(s) of FPGA_CLK_50MHZ.
+Related violations: <none>
+
+

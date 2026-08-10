@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "CH1_RTD_behav" "xil_defaultlib.CH1_RTD" -log "elaborate.log" 

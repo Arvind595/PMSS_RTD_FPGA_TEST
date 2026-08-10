@@ -126,10 +126,10 @@ begin
         send_rx_byte(x"0B"); -- Byte 2: Channel 11
         wait for 500 us;
         
-        send_rx_byte(x"03"); -- Byte 3: High byte of 1023 resistance code
+        send_rx_byte(x"00"); -- Byte 3: High byte of 1023 resistance code
         wait for 500 us;
         
-        send_rx_byte(x"FF"); -- Byte 4: Low byte of 1023 resistance code
+        send_rx_byte(x"00"); -- Byte 4: Low byte of 1023 resistance code
         
         -- 4. Wait and observe the physical latch update sequence & TX Echo
         -- Sending 4 bytes back via TX takes ~4.16 ms at 9600 baud.

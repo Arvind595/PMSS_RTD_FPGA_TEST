@@ -3,143 +3,149 @@
     with args -log rs422_dock.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rs422_dock.tcl
 
 
-INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 05-aug-2027.
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 06-aug-2027.
 #-----------------------------------------------------------
 # Vivado v2026.1 (64-bit)
 # SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Sat Aug  8 22:04:14 2026
-# Process ID         : 12928
-# Current directory  : D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/synth_1
+# Start of session at: Mon Aug 10 09:40:50 2026
+# Process ID         : 5276
+# Current directory  : C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/synth_1
 # Command line       : vivado.exe -log rs422_dock.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rs422_dock.tcl
-# Log file           : D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.vds
-# Journal file       : D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/synth_1\vivado.jou
-# Running On         : Arvinds-MSI
+# Log file           : C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.vds
+# Journal file       : C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/synth_1\vivado.jou
+# Running On         : RTLPC
 # Platform           : Windows 11
 # Operating System   : 26200
-# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-13700HX
-# CPU Frequency      : 2304 MHz
-# CPU Physical cores : 16
-# CPU Logical cores  : 24
-# Host memory        : 16868 MB
-# Swap memory        : 4138 MB
-# Total Virtual      : 21007 MB
-# Available Virtual  : 4112 MB
+# Processor Detail   : Intel(R) Core(TM) i7-14700
+# CPU Frequency      : 2112 MHz
+# CPU Physical cores : 20
+# CPU Logical cores  : 28
+# Host memory        : 16851 MB
+# Swap memory        : 3087 MB
+# Total Virtual      : 19938 MB
+# Available Virtual  : 4704 MB
 #-----------------------------------------------------------
 
 ****** Vivado v2026.1 (64-bit)
   **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
   **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
   **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-  **** Start of session at: Sat Aug  8 22:04:14 2026
+  **** Start of session at: Mon Aug 10 09:40:50 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source rs422_dock.tcl -notrace
-create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 584.125 ; gain = 268.547
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 585.070 ; gain = 268.332
 Command: synth_design -top rs422_dock -part xc7a100tcsg324-2
 Starting synth_design
 Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-2
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 23800
+INFO: [Synth 8-7075] Helper process launched with PID 15144
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1164.551 ; gain = 573.469
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1363.340 ; gain = 577.695
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'rs422_dock' [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:54]
-INFO: [Synth 8-256] done synthesizing module 'rs422_dock' (0#1) [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:54]
-WARNING: [Synth 8-6014] Unused sequential element rx_baud_cnt_reg was removed.  [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:190]
-WARNING: [Synth 8-6014] Unused sequential element rx_state_reg was removed.  [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:185]
-WARNING: [Synth 8-6014] Unused sequential element rx_bit_cnt_reg was removed.  [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:199]
-WARNING: [Synth 8-6014] Unused sequential element rx_shift_reg_reg was removed.  [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:211]
-WARNING: [Synth 8-6014] Unused sequential element register_1_reg was removed.  [D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:186]
-WARNING: [Synth 8-3917] design rs422_dock has port FP_STS2_YELLOW driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[9] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[8] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[7] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[6] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[5] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[4] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[3] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[2] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[1] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[0] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[9] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[8] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[7] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[6] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[5] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[4] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[3] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[2] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[1] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[0] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[15] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[14] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[13] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[12] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[11] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[10] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[9] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[8] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[7] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[6] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[5] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[4] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[3] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[2] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[1] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[0] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[15] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[14] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[13] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[12] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[11] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[10] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[9] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[8] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[7] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[6] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[5] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[4] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[3] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[2] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[1] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F2_LD[0] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[15] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[14] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[13] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[12] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[11] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[10] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[9] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[8] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[7] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[6] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[5] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[4] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[3] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[2] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[1] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F3_LD[0] driven by constant 0
-WARNING: [Synth 8-7129] Port RS422_RX in module rs422_dock is either unconnected or has no load
+INFO: [Synth 8-638] synthesizing module 'rs422_dock' [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'rs422_dock' (0#1) [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/sources_1/new/rs422_dock.vhd:54]
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[9] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[8] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[7] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[6] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[5] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[4] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[3] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[2] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[1] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1286.996 ; gain = 695.914
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1492.777 ; gain = 707.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1286.996 ; gain = 695.914
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1492.777 ; gain = 707.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1492.777 ; gain = 707.133
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1492.777 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]
+Finished Parsing XDC File [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.srcs/constrs_1/new/RTDFullPins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rs422_dock_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rs422_dock_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1534.266 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1536.180 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1536.180 ; gain = 750.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-2
-INFO: [Device 21-403] Loading part xc7a100tcsg324-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1286.996 ; gain = 695.914
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1536.180 ; gain = 750.535
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1536.180 ; gain = 750.535
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'rx_state_reg' in module 'rs422_dock'
+INFO: [Synth 8-802] inferred FSM for state register 'rx_byte_idx_reg' in module 'rs422_dock'
 INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'rs422_dock'
+INFO: [Synth 8-802] inferred FSM for state register 'cmd_fsm_reg' in module 'rs422_dock'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                             0001 |                               00
+                 iSTATE1 |                             0010 |                               01
+                 iSTATE2 |                             0100 |                               10
+                  iSTATE |                             1000 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_byte_idx_reg' using encoding 'one-hot' in module 'rs422_dock'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+               start_bit |                               01 |                               01
+               data_bits |                               10 |                               10
+                stop_bit |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_state_reg' using encoding 'sequential' in module 'rs422_dock'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               boot_init |                     000000000001 |                             0000
+            latch_step_1 |                     000000000010 |                             0010
+            latch_step_2 |                     000000000100 |                             0011
+            latch_step_3 |                     000000001000 |                             0100
+            latch_step_4 |                     000000010000 |                             0101
+         latch_step_wait |                     000000100000 |                             0110
+              ack_byte_1 |                     000001000000 |                             0111
+              ack_byte_2 |                     000010000000 |                             1000
+              ack_byte_3 |                     000100000000 |                             1001
+              ack_byte_4 |                     001000000000 |                             1010
+                ack_wait |                     010000000000 |                             1011
+                wait_cmd |                     100000000000 |                             0001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cmd_fsm_reg' using encoding 'one-hot' in module 'rs422_dock'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -150,26 +156,41 @@ INFO: [Synth 8-802] inferred FSM for state register 'tx_state_reg' in module 'rs
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'tx_state_reg' using encoding 'one-hot' in module 'rs422_dock'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1286.996 ; gain = 695.914
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1536.180 ; gain = 750.535
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   25 Bit       Adders := 1     
-	   2 Input   13 Bit       Adders := 1     
-	   2 Input    3 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
 +---Registers : 
+	              160 Bit    Registers := 1     
 	               25 Bit    Registers := 1     
-	               13 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 5     
+	               16 Bit    Registers := 3     
+	               13 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
 +---Muxes : 
-	   4 Input    3 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 2     
-	   4 Input    1 Bit        Muxes := 4     
+	   2 Input  160 Bit        Muxes := 1     
+	  12 Input  160 Bit        Muxes := 2     
+	  12 Input   16 Bit        Muxes := 3     
+	   4 Input   13 Bit        Muxes := 1     
+	  12 Input   12 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	  12 Input    8 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 8     
+	   5 Input    1 Bit        Muxes := 1     
+	  12 Input    1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -182,58 +203,39 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3917] design rs422_dock has port FP_STS2_YELLOW driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[9] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[8] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[7] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[6] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[5] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[4] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[3] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[2] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[1] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[0] driven by constant 1
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[9] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[8] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[7] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[6] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[5] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[4] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[3] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[2] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[1] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F_LE[0] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[15] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[14] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[13] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[12] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[11] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[10] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[9] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[8] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[7] driven by constant 0
-WARNING: [Synth 8-3917] design rs422_dock has port F1_LD[6] driven by constant 0
-INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-7129] Port RS422_RX in module rs422_dock is either unconnected or has no load
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[9] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[8] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[7] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[6] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[5] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[4] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[3] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[2] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[1] driven by constant 0
+WARNING: [Synth 8-3917] design rs422_dock has port F_nLOE[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1516.266 ; gain = 925.184
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1581.770 ; gain = 796.125
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1711.652 ; gain = 926.008
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1516.266 ; gain = 925.184
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1712.363 ; gain = 926.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1516.266 ; gain = 925.184
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1724.105 ; gain = 938.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -251,37 +253,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1773.926 ; gain = 1182.844
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1996.234 ; gain = 1210.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1773.926 ; gain = 1182.844
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1996.234 ; gain = 1210.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1773.926 ; gain = 1182.844
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1996.234 ; gain = 1210.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1773.926 ; gain = 1182.844
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1996.234 ; gain = 1210.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1773.926 ; gain = 1182.844
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1996.234 ; gain = 1210.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1773.926 ; gain = 1182.844
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1996.234 ; gain = 1210.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -298,48 +300,41 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     9|
+|2     |CARRY4 |    12|
 |3     |LUT1   |     4|
-|4     |LUT2   |     1|
-|5     |LUT3   |     2|
-|6     |LUT4   |     8|
-|7     |LUT5   |     1|
-|8     |LUT6   |     7|
-|9     |FDCE   |     8|
-|10    |FDPE   |     2|
+|4     |LUT2   |    13|
+|5     |LUT3   |    15|
+|6     |LUT4   |    42|
+|7     |LUT5   |    48|
+|8     |LUT6   |    82|
+|9     |FDCE   |   301|
+|10    |FDPE   |     4|
 |11    |FDRE   |    40|
-|12    |IBUF   |     2|
+|12    |IBUF   |     3|
 |13    |OBUF   |    74|
 +------+-------+------+
-
-Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |   159|
-+------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1773.926 ; gain = 1182.844
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1996.234 ; gain = 1210.590
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 145 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1773.926 ; gain = 1182.844
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1773.953 ; gain = 1182.844
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1996.234 ; gain = 1167.188
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1996.234 ; gain = 1210.590
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1789.027 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2005.387 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1902.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2009.102 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 742fc921
+Synth Design complete | Checksum: 4c0eb92c
 INFO: [Common 17-83] Releasing license: Vivado_Synthesis
-17 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+26 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1902.246 ; gain = 1318.121
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1902.246 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/MSPL WORK/PMSS/RTL/PMSS_FPGA_RTD_TEST/PMSS_RTD_FPGA_TEST/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 2009.102 ; gain = 1424.031
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2009.102 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Arvind/Projects/PMSS/VHDL/RTD/07-08-2026/rs422_dock/rs422_dock.runs/synth_1/rs422_dock.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file rs422_dock_utilization_synth.rpt -pb rs422_dock_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Aug  8 22:04:39 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 10 09:41:51 2026...

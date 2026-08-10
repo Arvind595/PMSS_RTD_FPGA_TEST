@@ -1,0 +1,110 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Sat Aug  8 16:42:28 2026
+| Host         : Rajesh running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CH1_RTD_control_sets_placed.rpt
+| Design       : CH1_RTD
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    32 |
+|    Minimum number of control sets                        |    32 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   141 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    32 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     7 |
+| >= 10 to < 12      |    16 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              29 |           13 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             227 |           66 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              35 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------+---------------------------+---------------------------+------------------+----------------+--------------+
+|        Clock Signal       |       Enable Signal       |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------+---------------------------+---------------------------+------------------+----------------+--------------+
+|  FPGA_CLK_50MHZ_IBUF_BUFG | msg_idx[4]_i_2_n_0        |                           |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | tx_line_i_1_n_0           |                           |                1 |              1 |         1.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | channel_sel[3]_i_2_n_0    | channel_sel[3]_i_1_n_0    |                1 |              4 |         4.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | msg_idx[4]_i_2_n_0        | msg_idx[4]_i_1_n_0        |                2 |              4 |         2.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_buf_len[3]_i_1_n_0     |                           |                2 |              4 |         2.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | flow_state                | flow_state[4]_i_1_n_0     |                3 |              5 |         1.67 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | CEB1                      |                           |                1 |              8 |         8.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_buffer[2]              |                           |                3 |              8 |         2.67 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_buffer[0]              |                           |                2 |              8 |         4.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_buffer[1]              |                           |                4 |              8 |         2.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_buffer[3]              |                           |                3 |              8 |         2.67 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | tx_data_reg[7]_i_1_n_0    |                           |                5 |              8 |         1.60 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | res_int[9]_i_2_n_0        | res_int[9]_i_1_n_0        |                5 |              9 |         1.80 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[1][15]          |                           |                5 |             10 |         2.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[1][9]           |                           |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[3][8]           |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[3][9]           |                           |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[3][10]          |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[3][11]          |                           |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[1][8]           |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[3][12]          |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[1][12]          |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[1][13]          |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[3][13]          |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[3][14]          |                           |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[1][10]          |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[1][11]          |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[1][14]          |                           |                3 |             10 |         3.33 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | latch_reg[3][15]          |                           |                2 |             10 |         5.00 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | rx_baud_count[12]_i_1_n_0 |                           |                4 |             13 |         3.25 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG | tx_baud_count             | tx_baud_count[12]_i_1_n_0 |                4 |             13 |         3.25 |
+|  FPGA_CLK_50MHZ_IBUF_BUFG |                           |                           |               13 |             29 |         2.23 |
++---------------------------+---------------------------+---------------------------+------------------+----------------+--------------+
+
+
